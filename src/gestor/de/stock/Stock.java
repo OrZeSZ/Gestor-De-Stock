@@ -24,8 +24,8 @@ public class Stock {
         this.items = items;
     }
     
-    public List consultarItemsFaltantes( int cantidadMaxima){
-        List resultado= new ArrayList<>();
+    public ArrayList<ItemStock> consultarItemsFaltantes( int cantidadMaxima){
+        ArrayList<ItemStock> resultado= new ArrayList<>();
         
         for(int i=0;i<items.size();i++){
             if(items.get(i).getCantidad()<cantidadMaxima){
