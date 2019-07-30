@@ -6,6 +6,7 @@
 package gestor.de.stock;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -14,10 +15,6 @@ import java.util.ArrayList;
 public class Stock {
     private ArrayList<ItemStock> items= new ArrayList<>();
 
-    
-    
-    
-    
     //GET & SETS
     public ArrayList<ItemStock> getItems() {
         return items;
@@ -27,7 +24,16 @@ public class Stock {
         this.items = items;
     }
     
-    
+    public List consultarItemsFaltantes( int cantidadMaxima){
+        List resultado= new ArrayList<>();
+        
+        for(int i=0;i<items.size();i++){
+            if(items.get(i).getCantidad()<cantidadMaxima){
+                resultado.add(items.get(i));
+            }
+        }
+        return resultado;
+    }
     
     
 }

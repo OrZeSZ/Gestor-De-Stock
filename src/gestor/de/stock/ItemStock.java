@@ -18,6 +18,7 @@ public class ItemStock {
     
     
     public ItemStock(Computadora c, int cantidad){
+        
     }
     
     
